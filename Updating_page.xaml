@@ -1,0 +1,45 @@
+﻿<Page x:Class="Workers_base1._0.Updating_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Workers_base1._0"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800"
+      Title="Updating_page">
+    <Grid>
+        <!--DataContext="{d:DesignInstance Type=local:WorkersViewModel}"-->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1"></Grid>
+        <TextBlock FontSize="40" Foreground="White">First name:</TextBlock>
+        <TextBox Text="{Binding FirstNameView}" FontSize="40" VerticalAlignment="Bottom" Margin="5"></TextBox>
+
+        <TextBlock FontSize="40" Grid.Row="1" Foreground="White">Last name:</TextBlock>
+        <TextBox Text="{Binding LastNameView}" FontSize="40" VerticalAlignment="Bottom" Margin="5" Grid.Row="1"></TextBox>
+
+        <TextBlock FontSize="40" Grid.Row="2" Foreground="White">Salary:</TextBlock>
+        <TextBox Text="{Binding SalaryView}" FontSize="40" VerticalAlignment="Bottom" Margin="5" Grid.Row="2"></TextBox>
+
+        <TextBlock FontSize="40" Grid.Row="3" Foreground="White">Work experience:</TextBlock>
+        <TextBox Text="{Binding WorkExperienceView}" FontSize="40" VerticalAlignment="Bottom" Margin="5" Grid.Row="3"></TextBox>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding AddWorker}" Grid.Row="4" Margin="20,30" Background="Orange" Grid.Column="0" Foreground="White" FontSize="50">ADD</Button>
+            <Button Command="{Binding DeleteWorker}" Grid.Row="4" Margin="20,30" Background="Orange" Grid.Column="1"  Foreground="White" FontSize="50">DELETE</Button>
+            <Button Command="{Binding OpenUpdatePage}" Grid.Row="4" Margin="20,30" Background="Orange" Grid.Column="2"  Foreground="White" FontSize="50">UPDATE</Button>
+
+
+        </Grid>
+
+    </Grid>
+</Page>
